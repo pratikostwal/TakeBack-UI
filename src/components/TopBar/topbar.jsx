@@ -1,4 +1,4 @@
-import "./Topbar.css";
+// import "./Topbar.css";
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Badge } from "@mui/material";
 import { DefaultImg } from "./DefaultImg";
@@ -24,19 +24,18 @@ const Topbar = () => {
 
   return (
     <Box
-      sx={{ marginTop: "-.5%" }}
       display="flex"
       padding="10px !important"
       justifyContent="space-between"
       p={2}
-      bgcolor="#24d324"
+      bgcolor="#24B332"
     >
       <h2
         style={{
-          color: "#fdfeff",
+          color: "#ffffff",
           marginTop: "1%",
           fontSize: "20px",
-          marginLeft: "1%",
+          marginLeft: "0%",
           fontWeight: "10p%",
         }}
       >
