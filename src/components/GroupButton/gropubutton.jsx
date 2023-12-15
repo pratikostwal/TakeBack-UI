@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
-import ExecutiveView from "../Pages/Executiveview";
 
 const toCamelCase = (text) => {
   return text.replace(/\s+/g, '').toLowerCase();
@@ -18,7 +17,7 @@ export default function GroupButton() {
   const renderComponentBasedOnButton = () => {
     switch (selectedButton) {
       case 'Executive View':
-        return <ExecutiveView />;
+        return ;
       case 'Return Stream':
         return <p>Display Return Stream Component</p>;
       case 'Goal Projection':

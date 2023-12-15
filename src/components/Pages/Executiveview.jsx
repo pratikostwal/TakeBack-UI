@@ -45,7 +45,7 @@ const CardStyled = styled(Card)({
   },
 });
 
-const Index = () => {
+const Executiveview = () => {
   return (
     <>
       <Grid container spacing={0.5}>
@@ -91,12 +91,17 @@ const Index = () => {
       </Grid>
 
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} md={6} lg={6}>
+        <Grid item xs={12} sm={6} md={4}>
           <Card>
             <DonutChart />
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={6}>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card>
+            <h1>Bar Chart</h1>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
           <Card>
             <h1>Bar Chart</h1>
           </Card>
@@ -106,4 +111,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Executiveview;

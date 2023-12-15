@@ -1,12 +1,14 @@
 import React from "react";
 import Topbar from "../TopBar/topbar";
-import GroupButton from "../GroupButton/gropubutton";
+// import GroupButton from "../GroupButton/gropubutton";
+import Tabs from "../Tabs/tab";
 
 const Dashboard = () => {
   return (
     <div >
       <Topbar />
-      <GroupButton />
+      <Tabs />
+      {/* <GroupButton /> */}
     </div>
   );
 };
