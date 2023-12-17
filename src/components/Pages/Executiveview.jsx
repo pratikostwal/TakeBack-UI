@@ -2,6 +2,8 @@ import React from "react";
 import { Grid, Card, CardContent, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import DonutChart from "../Charts/DonutChart";
+import StackedColumnChart from "../Charts/StackedColumnChart";
+import PieChart from "../Charts/PieChart";
 
 const cardsData = [
   {
@@ -98,12 +100,12 @@ const Executiveview = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Card>
-            <h1>Bar Chart</h1>
+            <StackedColumnChart />
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={12} md={4}>
           <Card>
-            <h1>Bar Chart</h1>
+            <PieChart />
           </Card>
         </Grid>
       </Grid>

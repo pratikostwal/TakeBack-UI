@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Executiveview from '../Pages/Executiveview';
-import Dfa from '../Pages/Dfa';
-import Ars from '../Pages/Ars';
-import Techrefresh from '../Pages/Techrefresh';
-import Tradein from '../Pages/Tradein';
+import React, { useState } from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Executiveview from "../Pages/Executiveview";
+import Dfa from "../Pages/Dfa";
+import Ars from "../Pages/Ars";
+import Techrefresh from "../Pages/Techrefresh";
+import Tradein from "../Pages/Tradein";
 
 const ResponsiveTabs = () => {
   const [value, setValue] = useState(0);
@@ -18,7 +18,7 @@ const ResponsiveTabs = () => {
   return (
     <div>
       <Tabs
-      style={{background:"#F1F1F1"}}
+        style={{ background: "#F1F1F1" }}
         value={value}
         onChange={handleChange}
         variant="scrollable"
