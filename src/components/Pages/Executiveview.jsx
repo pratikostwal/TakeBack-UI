@@ -4,6 +4,7 @@ import { styled } from "@mui/system";
 import DonutChart from "../Charts/DonutChart";
 import StackedColumnChart from "../Charts/StackedColumnChart";
 import PieChart from "../Charts/PieChart";
+import Map from "../Maps/Map";
 
 const cardsData = [
   {
@@ -59,7 +60,7 @@ const Executiveview = () => {
                   component="div"
                   style={{
                     color: "#0076CE",
-                    fontSize: "11px",
+                    fontSize: "10px",
                     marginBottom: "10px",
                   }}
                 >
@@ -69,7 +70,7 @@ const Executiveview = () => {
                   <Typography
                     style={{
                       fontWeight: "bold",
-                      fontSize: "20px",
+                      fontSize: "15px",
                       color: "#272727",
                       marginRight: "2px",
                       marginBottom: "-3%",
@@ -106,6 +107,14 @@ const Executiveview = () => {
         <Grid item xs={12} sm={12} md={4}>
           <Card>
             <PieChart />
+          </Card>
+        </Grid>
+      </Grid>
+
+      <Grid>
+        <Grid item xs={12} sm={12} md={4}>
+          <Card>
+            <Map />
           </Card>
         </Grid>
       </Grid>
