@@ -5,6 +5,11 @@ import DonutChart from "../Charts/DonutChart";
 import StackedColumnChart from "../Charts/StackedColumnChart";
 import PieChart from "../Charts/PieChart";
 import Map from "../Maps/Map";
+import Switch from "../Switch/Switch";
+import TrendChart from "../Charts/TrendzChart";
+import ChartComponent from "../Charts/BarChart";
+import GreenSignal from "../../assets/GreenSignal.svg";
+import RedSignal from "../../assets/RedSignal.svg";
 
 const cardsData = [
   {
@@ -12,18 +17,21 @@ const cardsData = [
     text: "% of Goal Met",
     percentage: "26%",
     label: "FY24 YTD",
+    signal: GreenSignal, // Add GreenSignal here
   },
   {
     id: 2,
     text: "Product Returned YTD",
     percentage: "62,400",
     label: "Metric Tons",
+    signal: GreenSignal, // Add GreenSignal here
   },
   {
     id: 3,
     text: "Product Sold YTD",
     percentage: "240,000",
     label: "Metric Tons",
+    signal: RedSignal, // Add GreenSignal here
   },
   {
     id: 4,
@@ -35,6 +43,7 @@ const cardsData = [
 
 const CardStyled = styled(Card)({
   margin: "10px",
+  marginTop: "-.5rem",
   position: "relative",
   boxShadow: "0px 2px 4px rgba(0, 0, 0, .2)",
   "&::after": {
@@ -45,12 +54,14 @@ const CardStyled = styled(Card)({
     left: 0,
     right: 0,
     height: "5px",
+    borderBottom: "5px solid #14B8A6", // Add this line to set the bottom border color to red
   },
 });
 
 const Executiveview = () => {
   return (
     <>
+      <Switch />
       <Grid container spacing={0.5}>
         {cardsData.map((card) => (
           <Grid item xs={12} sm={6} md={3} key={card.id}>
@@ -86,14 +97,24 @@ const Executiveview = () => {
                   >
                     ({card.label})
                   </Typography>
+                  {card.signal && (
+                  <img
+                    src={card.signal}
+                    alt="Signal"
+                    style={{ marginLeft: "5px", height: "15px" }}
+                  />
+                )}
                 </div>
               </CardContent>
             </CardStyled>
           </Grid>
         ))}
       </Grid>
-
-      <Grid container spacing={2}>
+      <Grid
+        container
+        spacing={2}
+        style={{ paddingLeft: 12, paddingRight: 12, marginTop: ".5rem" }}
+      >
         <Grid item xs={12} sm={6} md={4}>
           <Card>
             <DonutChart />
@@ -111,10 +132,27 @@ const Executiveview = () => {
         </Grid>
       </Grid>
 
-      <Grid>
+      <Grid style={{ paddingLeft: 12, paddingRight: 12, marginTop: "1rem" }}>
         <Grid item xs={12} sm={12} md={4}>
           <Card>
             <Map />
+          </Card>
+        </Grid>
+      </Grid>
+
+      <Grid
+        container
+        spacing={2}
+        style={{ paddingLeft: 12, paddingRight: 12, marginTop: "1rem" }}
+      >
+        <Grid item xs={12} sm={6} md={6} lg={6}>
+          <Card>
+            <TrendChart />
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={6} lg={6}>
+          <Card>
+            <ChartComponent />
           </Card>
         </Grid>
       </Grid>

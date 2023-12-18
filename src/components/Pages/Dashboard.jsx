@@ -5,7 +5,7 @@ import Tabs from "../Tabs/tab";
 
 const Dashboard = () => {
   return (
-    <div >
+    <div style={{backgroundColor:"#F7F7FC"}}>
       <Topbar />
       <Tabs />
       {/* <GroupButton /> */}

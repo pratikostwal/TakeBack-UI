@@ -10,6 +10,7 @@ const PieChart = () => {
     },
     title: {
       text: 'Disposition Decision',
+      align: 'left',
     },
     plotOptions: {
         pie: {
@@ -27,15 +28,17 @@ const PieChart = () => {
         layout: "vertical",
         itemMarginTop: 5,
         itemMarginBottom: 5,
+        itemStyle: {
+          fontSize: "10px", // Set font size for legend items
+        },
       },
     series: [
       {
         name: 'Categories',
         data: [
-          { name: 'Category A', y: 30 },
-          { name: 'Category B', y: 40 },
-          { name: 'Category C', y: 20 },
-          { name: 'Category D', y: 10 },
+          { name: 'Remarket', y: 30 },
+          { name: 'Reuse', y: 15 },
+          { name: 'Recycle', y: 5 },
         ],
       },
     ],

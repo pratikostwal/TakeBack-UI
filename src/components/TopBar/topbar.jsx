@@ -24,6 +24,7 @@ const Topbar = () => {
 
   return (
     <Box
+      height="2rem"
       display="flex"
       padding="10px !important"
       justifyContent="space-between"
@@ -33,8 +34,8 @@ const Topbar = () => {
       <h2
         style={{
           color: "#ffffff",
-          marginTop: "1%",
-          fontSize: "20px",
+          marginTop: ".5%",
+          fontSize: "15px",
           marginLeft: "0%",
           fontWeight: "10p%",
         }}
@@ -71,7 +72,7 @@ const Topbar = () => {
             variant="h2"
             color="#fdfeff"
             fontWeight="bold"
-            sx={{ m: "13px 0 0 0" }}
+            sx={{ m: "9px 0 0 0" }}
             fontSize="0.87rem"
             display={"flex"}
           >

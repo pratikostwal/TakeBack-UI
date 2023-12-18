@@ -9,12 +9,13 @@ const DonutChart = () => {
     },
     title: {
       text: "Return Stream - Contribution",
+      align: "left", // Align the title text to the right
     },
     plotOptions: {
       pie: {
-        innerSize: "60%", // Set the innerSize to create a hole in the center
+        innerSize: "50%", // Set the innerSize to create a hole in the center
         dataLabels: {
-          distance: -25,
+          distance: -20,
           color: "white",
           format: " {point.percentage:.1f}%",
         },
@@ -27,22 +28,22 @@ const DonutChart = () => {
       layout: "vertical",
       itemMarginTop: 5,
       itemMarginBottom: 5,
+      itemStyle: {
+        fontSize: "10px", // Set font size for legend items
+      },
     },
     series: [
       {
         name: "Data",
         data: [
-          ["Category 1", 25],
-          ["Category 2", 35],
-          ["Category 3", 20],
-          ["Category 4", 10],
-          ["Category 5", 30],
-          ["Category 6", 34],
-          ["Category 7", 23],
-          ["Category 8", 57],
-          ["Category 9", 43],
-          ["Category 10", 12],
-          ["Category 11", 45],
+          ["ARS", 25],
+          ["Customer Trade in", 35],
+          ["Mail Back/Reconnect", 20],
+          ["Producer Responsibility", 10],
+          ["DFS", 30],
+          ["Tech Refresh", 34],
+          ["GSP", 23],
+          ["ARB", 57],
 
           // Add more data as needed
         ],

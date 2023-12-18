@@ -24,15 +24,18 @@ const ResponsiveTabs = () => {
         variant="scrollable"
         scrollButtons="auto"
         aria-label="responsive tabs example"
+        sx={{
+          "& .MuiTabs-indicator": {
+            height: 2,
+            marginLeft:".1rem"
+          },
+        }}
       >
-        <Tab label="Executive View" />
-        <Tab label="DFS" />
-        <Tab label="ARS" />
-        <Tab label="Tech Refresh" />
-        <Tab label="Trade In" />
-        {/* <Tab label="Goal Projection" />
-        <Tab label="Channel" />
-        <Tab label="Partner" /> */}
+        <Tab label="Executive View" style={{ fontSize: "11px" }} />
+        <Tab label="DFS" style={{ fontSize: "11px" }} />
+        <Tab label="ARS" style={{ fontSize: "11px" }} />
+        <Tab label="Tech Refresh" style={{ fontSize: "11px" }} />
+        <Tab label="Trade In" style={{ fontSize: "11px" }} />
         {/* Add more tabs as needed */}
       </Tabs>
       <Typography
