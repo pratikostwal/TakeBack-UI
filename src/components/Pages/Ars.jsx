@@ -54,7 +54,7 @@ const CardStyled = styled(Card)({
 
 const Ars = () => {
   return (
-    <Grid container spacing={1}>
+    <Grid container spacing={1} style={{paddingTop:"30px" ,paddingLeft:"10px", paddingRight:"10px"}}>
       {cardsData.map((card) => (
         <Grid item xs={12} sm={3} md={3} lg={1.7} xl={1.7} key={card.id}>
           <CardStyled>

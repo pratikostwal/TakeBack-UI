@@ -3,7 +3,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Executiveview from "../Pages/Executiveview";
-import Dfa from "../Pages/Dfa";
+import Dfs from "../Pages/Dfs";
 import Ars from "../Pages/Ars";
 import Techrefresh from "../Pages/Techrefresh";
 import Tradein from "../Pages/Tradein";
@@ -24,15 +24,18 @@ const ResponsiveTabs = () => {
         variant="scrollable"
         scrollButtons="auto"
         aria-label="responsive tabs example"
+        sx={{
+          "& .MuiTabs-indicator": {
+            height: 2,
+            marginLeft:".1rem"
+          },
+        }}
       >
-        <Tab label="Executive View" />
-        <Tab label="DFS" />
-        <Tab label="ARS" />
-        <Tab label="Tech Refresh" />
-        <Tab label="Trade In" />
-        {/* <Tab label="Goal Projection" />
-        <Tab label="Channel" />
-        <Tab label="Partner" /> */}
+      <Tab label="Executive View" style={{ fontSize: "11px" }} />
+        <Tab label="DFS" style={{ fontSize: "11px" }} />
+        <Tab label="ARS" style={{ fontSize: "11px" }} />
+        <Tab label="Tech Refresh" style={{ fontSize: "11px" }} />
+        <Tab label="Trade In" style={{ fontSize: "11px" }} />
         {/* Add more tabs as needed */}
       </Tabs>
       <Typography
@@ -51,7 +54,7 @@ const ResponsiveTabs = () => {
         id={`responsive-tabpanel-${1}`}
         aria-labelledby={`responsive-tab-${1}`}
       >
-        <Dfa />
+        <Dfs />
       </Typography>
       <Typography
         component="div"
@@ -84,5 +87,4 @@ const ResponsiveTabs = () => {
     </div>
   );
 };
-
 export default ResponsiveTabs;

@@ -48,7 +48,7 @@ const CardStyled = styled(Card)({
 
 const Techrefresh = () => {
   return (
-    <Grid container spacing={1}>
+    <Grid container spacing={1}style={{paddingTop:"30px" ,paddingLeft:"10px", paddingRight:"10px"}}>
       {cardsData.map((card) => (
         <Grid item xs={12} sm={4} md={4} lg={2} xl={2} key={card.id}>
           <CardStyled>
